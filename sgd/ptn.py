@@ -1,9 +1,15 @@
 import PTN
 
-
 class parse_title:
     def __init__(self, name):
         ptn_dict = PTN.parse(name)
+
+        # --- PARCHE SOLO PARA TU PELÍCULA ---
+        if "2010" in name and "1984" in name:
+            ptn_dict["title"] = "2010 the year we make contact"
+            ptn_dict["year"] = 1984
+        # ------------------------------------
+
         key_list = [
             "resolution",
             "codec",
@@ -55,3 +61,4 @@ class parse_title:
             else:
                 self.formatted += self.get_val(segment, " ")
         return self.formatted
+        
