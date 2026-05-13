@@ -1,5 +1,6 @@
 setuptools
 beautifulsoup4
+parse-torrent-name
 lxml>=5.2.0
 faust-cchardet
 google-api-python-client
